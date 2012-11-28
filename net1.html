@@ -1,0 +1,118 @@
+
+<!-- TWO STEPS TO INSTALL JAVASCRIPT QUIZ:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  -->
+
+<!-- STEP ONE: Paste this code into the HEAD of your HTML document  -->
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "a";
+ans[3] = "d";
+ans[4] = "c";
+ans[5] = "d";
+
+explainAnswer[1]="The reason why Answer 1 is Melakukan konversi obyek";
+explainAnswer[2]="The reason why Answer 2 is mengubah bentuk melalui titik pada pinggiran";
+explainAnswer[3]="The reason why Answer 3 is Ctrl+Shift+V";
+explainAnswer[4]="The reason why Answer 4 is Mengubah bentuk obyek";
+explainAnswer[5]="The reason why Answer 5 is Karena motion lain bukan digunakan untuk berpindah tempat";
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score(){
+var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=5;i++){
+   answerText=answerText+"\nQuestion :"+i+"\n";
+  if(ans[i]!=yourAns[i]){
+    answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+  }
+  else{
+    answerText=answerText+" \nCorrect! \n";
+    score++;
+  }
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more";
+}
+if(score>=1 && score <=2){
+answerText=answerText+"bit more practice";
+}
+if(score>=3 && score <=3){
+answerText=answerText+"doing ok";
+}
+if(score>4){
+answerText=answerText+"Good";
+}
+
+alert(answerText);
+
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<!-- STEP TWO: Copy this code into the BODY of your HTML document  -->
+
+<BODY>
+
+<DIV ALIGN="LEFT">
+<h1>Flash Quiz</h1>
+<b>Test your knowledge</b>
+<hr>
+<FORM>
+<b>1. Shortcut Ctrl+B merupakan shortcut yang kita gunakan untuk...</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) Melakukan perintah paste pada objek yang telah dikopi<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) Melakukan konversi objek<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) Mengubah warna stage<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) Mengubah bentuk objek<p>
+<b>2. Subselection tool digunakan untuk...</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) Mengubah bentuk melalui titik-titik pada pinggiran objek<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) Mengubah warna objek<br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) Mengubah jenis frame pada sebuah layer<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) Mengubah warna stage<p>
+<b>3. Shortcut yang digunakan untuk command Paste in Place adalah...</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) F6<br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) F9<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) F5<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) Ctrl + Shift + V<p>
+<b>4. Free Transform  tool digunakan untuk...</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) Memasukkan Text <br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) Membuat obyek berbentuk persegi<br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) Mengubah bentuk obyek <br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) Memberi warna <p>
+<b>5. Membuat animasi berpindah tempat menggunakan...</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) Motion shape<br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) Motion guide<br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) Motion patch<br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) Motion tween<p>
+<LEFT>
+<input type=button onClick="Score()" value="evaluation">
+</LEFT>
+</FORM>
+</DIV>
+
+
+<!-- Script Size:  4.69 KB -->
